@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping>
+     <class name="com.javapapers.spring.mvc.NgoDetails" 
+         table="ngo_details_temperory">
+       
+       <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+         <property name="userName"></property>
+         <property name="ngoname"></property>
+         <property name="foundation"></property>
+         <property name="foundationtype"></property>
+         <property name="ngoemail"></property>
+         <property name="ngoownername"></property>
+         <property name="ngotelno"></property>
+         <property name="ngoaddressline1"></property>
+         <property name="ngoaddressline2"></property>
+         <property name="ngocountry"></property>
+         <property name="ngocity"></property>
+         <property name="ngopin"></property>
+       <property name="randomno"></property>
+       <property name="authorization_letter"></property>
+       <property name="submission_date"></property>
+   
+     </class>
+     
+ </hibernate-mapping>

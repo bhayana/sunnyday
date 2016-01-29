@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+ 
+ <hibernate-mapping>
+     <class name="com.javapapers.spring.mvc.OwnerDetails" 
+         table="ngo_owner_details_temperory">
+       
+       <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+         <property name="ngoownername"></property>
+         <property name="ngoownertelno"></property>
+        <property name="ngoowneremailaddress"></property>
+         <property name="ngoowneraddressline1"></property>
+         <property name="ngoowneraddressline2"></property>
+         <property name="ngoownercountry"></property>
+         <property name="ngoownercity"></property>
+         <property name="ngoownerpin"></property>
+         <property name="ngoemailid"></property>
+         <property name="ngoname"></property>
+       
+   
+     </class>
+     
+ </hibernate-mapping>

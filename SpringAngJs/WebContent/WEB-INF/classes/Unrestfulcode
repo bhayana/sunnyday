@@ -1,0 +1,142 @@
+
+	
+	/* @Path("/add")
+	  @POST
+	  @Consumes("application/json")
+	  @Produces("application/json")
+	  public Response addActor(@QueryParam("name") String name) {
+		 
+	   System.out.println("getting user id: ");
+	   return Response.ok().entity(new UserDetails("Rajan","rajan.bhayana@gmail.com"))
+				.header("Access-Control-Allow-Origin","*")
+				.header("Access-Control-Allow-Credentials", "true")
+				.header("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With")
+				.header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT,OPTIONS,HEAD")
+				.build();
+	  }*/
+	 
+	
+
+
+	public void getConnection()
+	{
+		Configuration cfg= new Configuration();
+		cfg.configure("hibernate.cfg.xml");
+		
+		SessionFactory factory=cfg.buildSessionFactory();
+		
+		Session session=factory.openSession();
+		
+		Transaction t=session.beginTransaction();
+		
+		NgoDetails n1=new NgoDetails();
+		
+		*/
+		
+		/*
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root", "Sadhna@22");
+			Statement st=null;
+			st = connection.createStatement();
+			String sql;
+			sql="Select username from Login";
+			ResultSet rs= st.executeQuery(sql);
+			 while(rs.next()){
+		         //Retrieve by column name
+		      
+		         String name = rs.getString("username");
+
+		         System.out.println(" Name: " + name);
+		      }
+
+		} catch (SQLException e) {
+			System.out.println("Connection Failed! Check output console");
+			e.printStackTrace();
+			//return ;
+		}catch (ClassNotFoundException e) {
+			System.out.println("Where is your MySQL JDBC Driver?");
+			e.printStackTrace();
+			//return;
+		}*/
+	
+	
+
+
+
+
+/*}*/
+/*
+
+CREATE TABLE ngo_details (
+		ngoname VARCHAR(20), 
+		ngoownername VARCHAR(20),
+		foundation_type VARCHAR(20),
+		ngoaddressline1 VARCHAR(20),
+		ngoaddressline2 VARCHAR(20),
+		ngoaddressline2 VARCHAR(20),
+		city VARCHAR(20),
+		country VARCHAR(20),
+		pin VARCHAR(20),
+		telephoneno VARCHAR(20),
+		emailaddress VARCHAR(20)
+		ngousername VARCHAR(20)
+		);
+		
+		
+		CREATE TABLE ngo_invoice_details (
+		ngoname VARCHAR(20), 
+		ngoownername VARCHAR(20),
+		foundation_type VARCHAR(20),
+		ngoaddressline1 VARCHAR(20),
+		ngoaddressline2 VARCHAR(20),
+		ngoaddressline2 VARCHAR(20),
+		city VARCHAR(20),
+		country VARCHAR(20),
+		pin VARCHAR(20),
+		telephoneno VARCHAR(20),
+		emailaddress VARCHAR(20)
+		ngousername VARCHAR(20)
+		);
+*/
+
+/*
+@POST
+@Path("/upload")
+@Consumes(MediaType.MULTIPART_FORM_DATA)
+@Produces("text/html")
+public Response uploadFile(
+    @FormDataParam("file") InputStream fileInputString,
+    @FormDataParam("file") FormDataContentDisposition fileInputDetails) {
+
+  String fileLocation = SAVE_FOLDER + fileInputDetails.getFileName();
+  String status = null;
+  NumberFormat myFormat = NumberFormat.getInstance();
+  myFormat.setGroupingUsed(true);
+   
+  // Save the file 
+  try {
+   OutputStream out = new FileOutputStream(new File(fileLocation));
+   byte[] buffer = new byte[1024];
+   int bytes = 0;
+   long file_size = 0; 
+   while ((bytes = fileInputString.read(buffer)) != -1) {
+    out.write(buffer, 0, bytes);
+    file_size += bytes;
+   }
+   out.flush();  
+   out.close();
+           
+   logger.info(String.format("Inside uploadFile==> fileName: %s,  fileSize: %s", 
+        fileInputDetails.getFileName(), myFormat.format(file_size)));
+           
+   status = "File has been uploaded to:" + fileLocation 
+               + ", size: " + myFormat.format(file_size) + " bytes";
+  } catch (IOException ex) {
+    logger.error("Unable to save file: "  + fileLocation);
+    ex.printStackTrace();
+  }
+
+  return Response.status(200).entity(status).build();
+}
+}*/
